@@ -2328,7 +2328,7 @@ function deactivate() {
 var OpenAIViewProvider = class {
   constructor(_extensionUri) {
     this._extensionUri = _extensionUri;
-    this._apiKey = "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";
+    this._apiKey = "88888";
     this.openaiService = new OpenAIService(this._apiKey);
   }
   getOpenFiles() {
