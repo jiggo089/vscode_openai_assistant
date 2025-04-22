@@ -81,6 +81,7 @@ graph TD
     C --> G[File Management]
     D --> H[API Integration]
 \`\`\`
+<img width="738" alt="image" src="https://github.com/user-attachments/assets/4aad31d0-3956-4bea-8b15-fcf11fa0f080" />
 
 ### 3.2 Компоненты системы
 
@@ -120,6 +121,8 @@ sequenceDiagram
     Extension->>UI: Обновляет интерфейс
     UI->>User: Показывает результат
 \`\`\`
+<img width="693" alt="image" src="https://github.com/user-attachments/assets/72aa78a7-d0d8-4f8a-a324-2e64d3182213" />
+
 
 ## 4. User Stories
 
@@ -168,6 +171,7 @@ graph TD
     C --> F[Обновить контекст]
     D --> G[Обновить код]
 \`\`\`
+<img width="731" alt="image" src="https://github.com/user-attachments/assets/d4aac7c5-63e4-4b26-bafc-8c8c4f786472" />
 
 ### 5.2 Детальные прецеденты
 
