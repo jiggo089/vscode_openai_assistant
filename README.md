@@ -3,10 +3,7 @@
 VS Code OpenAI Assistant - это расширение для Visual Studio Code, которое интегрирует возможности OpenAI для анализа кода, помощи в разработке и исправления ошибок. Расширение предоставляет интуитивный интерфейс для взаимодействия с AI, позволяя разработчикам получать контекстно-зависимую помощь прямо в их IDE.
 
 
-
-https://github.com/user-attachments/assets/eb559c11-2d7d-4956-bb38-d64fd7d2c2eb
-
-
+https://github.com/user-attachments/assets/56ca3f0c-a7f1-4161-93c5-dca361f9e655
 
 ## Бизнес-требования
 
