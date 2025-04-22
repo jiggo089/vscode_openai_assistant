@@ -1,0 +1,86 @@
+{
+  "name": "openai-assistant",
+  "displayName": "OpenAI Assistant",
+  "description": "VS Code extension with OpenAI integration",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:javascript",
+    "onLanguage:json",
+    "onCommand:openai-assistant.analyzeDiagnostics"
+  ],
+  "browser": "./dist/web/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "openai-assistant.analyzeDiagnostics",
+        "title": "Analyze Code Problems with OpenAI"
+      },
+      {
+        "command": "openai-assistant.acceptSuggestion",
+        "title": "Accept OpenAI Suggestion"
+      },
+      {
+        "command": "openai-assistant.rejectSuggestion",
+        "title": "Reject OpenAI Suggestion"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "openai-assistant",
+          "title": "OpenAI Assistant",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "openai-assistant": [
+        {
+          "type": "webview",
+          "id": "openai-assistant.view",
+          "name": "OpenAI Assistant"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "npm run compile-web",
+    "test": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. --extensionTestsPath=dist/web/test/suite/extensionTests.js",
+    "pretest": "npm run compile-web",
+    "vscode:prepublish": "npm run package-web",
+    "compile-web": "npm run check-types && npm run lint && node esbuild.js",
+    "watch-web": "npm-run-all -p watch-web:*",
+    "watch-web:esbuild": "node esbuild.js --watch",
+    "watch-web:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package-web": "npm run check-types && npm run lint && node esbuild.js --production",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "run-in-browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ."
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/assert": "^1.5.11",
+    "eslint": "^9.23.0",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "mocha": "^11.1.0",
+    "typescript": "^5.8.2",
+    "@vscode/test-web": "^0.0.68",
+    "esbuild": "^0.25.1",
+    "glob": "^11.0.1",
+    "npm-run-all": "^4.1.5",
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "assert": "^2.1.0",
+    "esbuild-node-externals": "^1.5.0",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.0",
+    "marked": "^12.0.0"
+  }
+}
